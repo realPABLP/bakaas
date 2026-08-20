@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>A Special Birthday For You 🎂</title>
+  <title>A Special Birthday For You</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -18,7 +17,8 @@
       padding: 0;
     }
 
-    html, body {
+    html,
+    body {
       width: 100%;
       min-height: 100%;
     }
@@ -27,6 +27,7 @@
       background:
         radial-gradient(circle at 15% 20%, rgba(255,255,255,.8), transparent 28%),
         linear-gradient(135deg, #f6efe3, #eee3d1);
+
       font-family: "Poppins", sans-serif;
       display: flex;
       justify-content: center;
@@ -54,9 +55,7 @@
       padding: 30px 28px 52px;
     }
 
-    /* -------------------------
-       BUNTING
-    -------------------------- */
+    /* BUNTING */
 
     .bunting {
       height: 115px;
@@ -123,9 +122,7 @@
       border-top-color: #df775c;
     }
 
-    /* -------------------------
-       CONFETTI
-    -------------------------- */
+    /* CONFETTI */
 
     .confetti span {
       position: absolute;
@@ -136,23 +133,60 @@
       opacity: .8;
     }
 
-    .c1 { background:#dd6d61; top:150px; left:35px; }
-    .c2 { background:#d99b2e; top:185px; right:42px; }
-    .c3 { background:#6ca6a3; top:280px; left:55px; }
-    .c4 { background:#df7969; top:340px; right:35px; }
-    .c5 { background:#e4a63a; top:520px; left:38px; }
-    .c6 { background:#73a8a3; top:605px; right:43px; }
-    .c7 { background:#d97367; top:700px; left:60px; }
-    .c8 { background:#e0a132; top:760px; right:60px; }
+    .c1 {
+      background: #dd6d61;
+      top: 150px;
+      left: 35px;
+    }
+
+    .c2 {
+      background: #d99b2e;
+      top: 185px;
+      right: 42px;
+    }
+
+    .c3 {
+      background: #6ca6a3;
+      top: 280px;
+      left: 55px;
+    }
+
+    .c4 {
+      background: #df7969;
+      top: 340px;
+      right: 35px;
+    }
+
+    .c5 {
+      background: #e4a63a;
+      top: 520px;
+      left: 38px;
+    }
+
+    .c6 {
+      background: #73a8a3;
+      top: 605px;
+      right: 43px;
+    }
+
+    .c7 {
+      background: #d97367;
+      top: 700px;
+      left: 60px;
+    }
+
+    .c8 {
+      background: #e0a132;
+      top: 760px;
+      right: 60px;
+    }
 
     .diamond {
       transform: rotate(45deg);
       border-radius: 1px !important;
     }
 
-    /* -------------------------
-       TITLE
-    -------------------------- */
+    /* TITLE */
 
     .headline {
       position: relative;
@@ -178,9 +212,7 @@
       transform: rotate(-3deg);
     }
 
-    /* -------------------------
-       HEARTS
-    -------------------------- */
+    /* HEARTS */
 
     .heart {
       position: absolute;
@@ -201,9 +233,7 @@
       transform: rotate(12deg);
     }
 
-    /* -------------------------
-       CAKE
-    -------------------------- */
+    /* CAKE */
 
     .cake-area {
       position: relative;
@@ -239,12 +269,15 @@
       bottom: 45px;
       width: 270px;
       height: 180px;
+
       background:
         radial-gradient(circle, #d8675b 0 4px, transparent 5px) 20px 25px / 48px 45px,
         radial-gradient(circle, #e9b54e 0 4px, transparent 5px) 5px 7px / 48px 45px,
         radial-gradient(circle, #8bad94 0 3px, transparent 4px) 32px 10px / 50px 44px,
         linear-gradient(#efb5a2, #f1a98f);
+
       border-radius: 18px 18px 36px 36px;
+
       box-shadow:
         inset 0 -12px 0 rgba(177,80,60,.15),
         0 7px 12px rgba(70,35,18,.18);
@@ -257,12 +290,14 @@
       width: 270px;
       height: 64px;
       border-radius: 50%;
+
       background:
         radial-gradient(circle at 20% 45%, #f4cc8d 0 5px, transparent 6px),
         radial-gradient(circle at 40% 40%, #e97572 0 5px, transparent 6px),
         radial-gradient(circle at 60% 50%, #f1bf78 0 5px, transparent 6px),
         radial-gradient(circle at 80% 40%, #e97770 0 5px, transparent 6px),
         #744020;
+
       box-shadow: inset 0 -4px 0 rgba(0,0,0,.1);
     }
 
@@ -273,15 +308,32 @@
       height: 64px;
       background: #713819;
       border-radius: 22px 22px 15px 15px;
+
       clip-path: polygon(
-        0 0, 100% 0, 100% 42%,
-        94% 40%, 91% 77%, 86% 83%,
-        81% 42%, 75% 43%, 71% 69%,
-        66% 73%, 62% 40%, 55% 41%,
-        52% 74%, 47% 82%, 43% 41%,
-        36% 40%, 33% 65%, 28% 75%,
-        24% 39%, 17% 42%, 14% 75%,
-        8% 82%, 6% 42%, 0 44%
+        0 0,
+        100% 0,
+        100% 42%,
+        94% 40%,
+        91% 77%,
+        86% 83%,
+        81% 42%,
+        75% 43%,
+        71% 69%,
+        66% 73%,
+        62% 40%,
+        55% 41%,
+        52% 74%,
+        47% 82%,
+        43% 41%,
+        36% 40%,
+        33% 65%,
+        28% 75%,
+        24% 39%,
+        17% 42%,
+        14% 75%,
+        8% 82%,
+        6% 42%,
+        0 44%
       );
     }
 
@@ -294,12 +346,14 @@
       transform: translateX(-50%);
       top: -105px;
       border-radius: 5px;
+
       background:
         repeating-linear-gradient(
           -45deg,
           #fff1d4 0 9px,
           #e96f61 9px 18px
         );
+
       box-shadow: 0 3px 5px rgba(0,0,0,.15);
     }
 
@@ -319,10 +373,14 @@
       height: 32px;
       top: -40px;
       left: 1px;
+
       background: linear-gradient(#ffd451, #f18c27);
+
       border-radius: 55% 45% 60% 40%;
       transform: rotate(45deg);
+
       box-shadow: 0 0 20px rgba(255,168,35,.6);
+
       animation: flicker 1.4s infinite alternate ease-in-out;
     }
 
@@ -330,25 +388,32 @@
       0% {
         transform: rotate(42deg) scale(1);
       }
+
       100% {
         transform: rotate(48deg) scale(.88, 1.08);
       }
     }
 
-    /* -------------------------
-       MESSAGE
-    -------------------------- */
+    /* MAIN MESSAGE */
 
     .message {
       position: relative;
       text-align: center;
-      max-width: 390px;
-      margin: 20px auto 0;
+      max-width: 420px;
+      margin: 24px auto 0;
+
       font-family: "Playfair Display", serif;
-      font-size: clamp(17px, 4.6vw, 21px);
-      line-height: 1.55;
+      font-size: clamp(17px, 4.5vw, 20px);
+      line-height: 1.6;
+
       color: #3c2a22;
     }
+
+    .message strong {
+      font-weight: 600;
+    }
+
+    /* SPECIAL DAY */
 
     .special {
       font-family: "Dancing Script", cursive;
@@ -356,7 +421,7 @@
       text-align: center;
       font-weight: 600;
       font-size: clamp(36px, 10vw, 50px);
-      margin-top: 26px;
+      margin-top: 34px;
       transform: rotate(-2deg);
     }
 
@@ -366,55 +431,99 @@
       margin-right: 8px;
     }
 
-    /* -------------------------
-       TAP SURPRISE
-    -------------------------- */
+    /* PERSONAL MESSAGE */
+
+    .personal-message {
+      max-width: 430px;
+      margin: 30px auto 0;
+
+      text-align: center;
+
+      font-family: "Dancing Script", cursive;
+      font-size: clamp(27px, 7vw, 34px);
+      line-height: 1.35;
+
+      color: #9b382f;
+    }
+
+    /* SURPRISE BUTTON */
 
     .surprise-button {
       display: block;
+
+      width: min(100%, 360px);
+
       border: 0;
-      margin: 34px auto 2px;
-      padding: 14px 27px;
+
+      margin: 38px auto 0;
+
+      padding: 15px 22px;
+
       border-radius: 999px;
+
       font-family: "Poppins", sans-serif;
       font-size: 15px;
-      font-weight: 500;
-      color: #fff9ea;
-      background: #6f351d;
+      font-weight: 600;
+
+      color: #fff8e8;
+      background: #74381e;
+
       cursor: pointer;
-      box-shadow: 0 7px 18px rgba(88,42,21,.25);
+
+      box-shadow: 0 8px 20px rgba(76, 36, 17, .22);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .surprise-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 11px 24px rgba(76, 36, 17, .26);
     }
 
     .surprise-button:active {
       transform: scale(.97);
     }
 
-    .hidden-message {
-      max-height: 0;
+    /* SURPRISE MESSAGE */
+
+    .surprise-message {
       overflow: hidden;
+      max-height: 0;
+
       opacity: 0;
+
       text-align: center;
+
       font-family: "Dancing Script", cursive;
-      font-size: 31px;
-      color: #933d33;
-      transition: all .6s ease;
+      font-size: clamp(30px, 8vw, 42px);
+      font-weight: 600;
+
+      color: #8e322a;
+
+      transition:
+        max-height .6s ease,
+        opacity .5s ease,
+        margin .5s ease;
     }
 
-    .hidden-message.show {
-      max-height: 160px;
+    .surprise-message.show {
+      max-height: 140px;
       opacity: 1;
-      padding: 24px 10px 5px;
+      margin-top: 26px;
     }
+
+    /* FOOTER */
 
     .footer {
       text-align: center;
       color: rgba(70,45,30,.55);
       font-size: 11px;
-      margin-top: 28px;
+      margin-top: 34px;
       letter-spacing: .5px;
     }
 
-    /* Better appearance on desktop */
     @media (min-width: 600px) {
       body {
         padding: 30px 0;
@@ -425,6 +534,7 @@
         border-radius: 28px;
       }
     }
+
   </style>
 </head>
 
@@ -444,6 +554,7 @@
     </div>
 
     <section class="bunting">
+
       <div class="string"></div>
 
       <div class="flags">
@@ -455,11 +566,19 @@
         <span class="flag"></span>
         <span class="flag"></span>
       </div>
+
     </section>
 
     <section class="headline">
-      <div class="happy">Happy</div>
-      <div class="birthday">Birthday!</div>
+
+      <div class="happy">
+        Happy
+      </div>
+
+      <div class="birthday">
+        Birthday!
+      </div>
+
     </section>
 
     <div class="heart left">♥</div>
@@ -468,39 +587,81 @@
     <section class="cake-area">
 
       <div class="cake-shadow"></div>
+
       <div class="plate"></div>
 
       <div class="cake-body">
 
         <div class="cake-top"></div>
+
         <div class="icing"></div>
 
         <div class="candle">
+
           <div class="wick"></div>
+
           <div class="flame"></div>
+
         </div>
 
       </div>
 
     </section>
 
+    <!-- YOUR MAIN BIRTHDAY MESSAGE -->
+
     <section class="message">
-      Wishing you a day filled with<br>
-      love, laughter and happiness.<br>
-      May all your dreams come true!
+
+      <strong>Dear Young Entrepreneur,</strong>
+
+      <br><br>
+
+      Wishing you the happiest birthday on
+      <strong>27th August!</strong>
+
+      <br><br>
+
+      May your journey ahead be filled with success,
+      exciting opportunities, and countless achievements.
+
+      <br><br>
+
+      Wishing you all the best for everything yet to come!
+
     </section>
 
     <div class="special">
+
       <span class="little-heart">♡</span>
+
       Enjoy your special day!
+
     </div>
 
-    <button class="surprise-button" onclick="showSurprise()">
-      Tap for your birthday surprise ✨
+    <!-- REPLACES "YOU DESERVE THE HAPPIEST BIRTHDAY EVER" -->
+
+    <section class="personal-message">
+
+      I know you don’t celebrate, but I just wanted to wish you anyway
+      and hope it makes your day a little more enjoyable.
+
+    </section>
+
+    <!-- SURPRISE BUTTON NOW AT THE BOTTOM -->
+
+    <button
+      class="surprise-button"
+      id="surpriseButton"
+      onclick="showSurprise()"
+    >
+      Tap for your birthday surprise
     </button>
 
-    <div id="surprise" class="hidden-message">
-      You deserve the happiest birthday ever! 🎂❤️
+    <div
+      class="surprise-message"
+      id="surpriseMessage"
+    >
+      Sikeee! There’s no surprise!!
     </div>
 
     <div class="footer">
@@ -509,12 +670,30 @@
 
   </main>
 
-
   <script>
+
     function showSurprise() {
-      const surprise = document.getElementById("surprise");
-      surprise.classList.toggle("show");
+
+      const message =
+        document.getElementById("surpriseMessage");
+
+      const button =
+        document.getElementById("surpriseButton");
+
+      message.classList.toggle("show");
+
+      if (message.classList.contains("show")) {
+
+        button.textContent = "You really thought there was a surprise?";
+
+      } else {
+
+        button.textContent = "Tap for your birthday surprise";
+
+      }
+
     }
+
   </script>
 
 </body>
