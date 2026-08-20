@@ -17,6 +17,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     html,
     body {
       width: 100%;
@@ -24,21 +28,31 @@
     }
 
     body {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.8), transparent 28%),
-        linear-gradient(135deg, #f6efe3, #eee3d1);
-
       font-family: "Poppins", sans-serif;
+      color: #3c2118;
+
+      background-image:
+        linear-gradient(
+          rgba(30, 18, 10, 0.38),
+          rgba(30, 18, 10, 0.38)
+        ),
+        url("background.jpeg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
       display: flex;
       justify-content: center;
-      color: #3c2118;
+
+      padding: clamp(12px, 3vw, 32px);
     }
 
     .card {
       position: relative;
-      width: 100%;
-      max-width: 520px;
-      min-height: 100vh;
+      width: min(100%, 560px);
+      min-height: calc(100vh - 24px);
       overflow: hidden;
 
       background:
@@ -49,18 +63,26 @@
           transparent 1px,
           transparent 4px
         ),
-        #fff3d8;
+        rgba(255, 243, 216, 0.96);
 
-      box-shadow: 0 0 45px rgba(60, 30, 10, .18);
-      padding: 30px 28px 52px;
+      border-radius: clamp(18px, 4vw, 30px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.30),
+        0 2px 10px rgba(0,0,0,.18);
+
+      padding:
+        clamp(24px, 6vw, 38px)
+        clamp(18px, 5vw, 32px)
+        clamp(38px, 8vw, 58px);
+
+      backdrop-filter: blur(4px);
     }
 
-    /* BUNTING */
-
     .bunting {
-      height: 115px;
+      height: clamp(85px, 20vw, 115px);
       position: relative;
-      margin: -5px -35px 0;
+      margin: -8px -25px 0;
     }
 
     .string {
@@ -68,7 +90,7 @@
       width: 110%;
       height: 70px;
       left: -5%;
-      top: -28px;
+      top: -30px;
       border-bottom: 3px solid #976633;
       border-radius: 0 0 50% 50%;
       transform: rotate(-1deg);
@@ -76,9 +98,9 @@
 
     .flags {
       position: absolute;
-      top: 22px;
-      left: 4%;
-      right: 4%;
+      top: clamp(16px, 4vw, 25px);
+      left: 3%;
+      right: 3%;
       display: flex;
       justify-content: space-around;
     }
@@ -86,9 +108,9 @@
     .flag {
       width: 0;
       height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 47px solid #df775c;
+      border-left: clamp(13px, 4vw, 20px) solid transparent;
+      border-right: clamp(13px, 4vw, 20px) solid transparent;
+      border-top: clamp(34px, 9vw, 47px) solid #df775c;
       filter: drop-shadow(0 2px 1px rgba(0,0,0,.08));
       transform-origin: top center;
     }
@@ -122,71 +144,67 @@
       border-top-color: #df775c;
     }
 
-    /* CONFETTI */
-
     .confetti span {
       position: absolute;
       display: block;
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      opacity: .8;
+      opacity: .75;
     }
 
     .c1 {
       background: #dd6d61;
       top: 150px;
-      left: 35px;
+      left: 6%;
     }
 
     .c2 {
       background: #d99b2e;
       top: 185px;
-      right: 42px;
+      right: 7%;
     }
 
     .c3 {
       background: #6ca6a3;
       top: 280px;
-      left: 55px;
+      left: 9%;
     }
 
     .c4 {
       background: #df7969;
       top: 340px;
-      right: 35px;
+      right: 6%;
     }
 
     .c5 {
       background: #e4a63a;
       top: 520px;
-      left: 38px;
+      left: 7%;
     }
 
     .c6 {
       background: #73a8a3;
       top: 605px;
-      right: 43px;
+      right: 7%;
     }
 
     .c7 {
       background: #d97367;
       top: 700px;
-      left: 60px;
+      left: 10%;
     }
 
     .c8 {
       background: #e0a132;
       top: 760px;
-      right: 60px;
+      right: 10%;
     }
 
     .diamond {
       transform: rotate(45deg);
       border-radius: 1px !important;
     }
-
-    /* TITLE */
 
     .headline {
       position: relative;
@@ -197,47 +215,43 @@
 
     .happy {
       font-family: "Dancing Script", cursive;
-      font-size: clamp(54px, 15vw, 76px);
-      line-height: .85;
+      font-size: clamp(48px, 15vw, 78px);
+      line-height: .86;
       font-weight: 500;
       transform: rotate(-4deg);
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .birthday {
       font-family: "Dancing Script", cursive;
-      font-size: clamp(74px, 20vw, 108px);
+      font-size: clamp(67px, 20vw, 110px);
       line-height: .9;
       font-weight: 600;
       transform: rotate(-3deg);
     }
 
-    /* HEARTS */
-
     .heart {
       position: absolute;
       color: #df776b;
-      font-size: 34px;
+      font-size: clamp(25px, 7vw, 34px);
       opacity: .9;
     }
 
     .heart.left {
-      left: 30px;
+      left: 5%;
       top: 360px;
       transform: rotate(-12deg);
     }
 
     .heart.right {
-      right: 26px;
-      top: 382px;
+      right: 5%;
+      top: 385px;
       transform: rotate(12deg);
     }
 
-    /* CAKE */
-
     .cake-area {
       position: relative;
-      height: 340px;
+      height: clamp(270px, 72vw, 350px);
       margin-top: 12px;
       display: flex;
       justify-content: center;
@@ -247,7 +261,7 @@
     .cake-shadow {
       position: absolute;
       bottom: 15px;
-      width: 310px;
+      width: min(72vw, 310px);
       height: 38px;
       background: rgba(63,33,20,.16);
       border-radius: 50%;
@@ -257,7 +271,7 @@
     .plate {
       position: absolute;
       bottom: 18px;
-      width: 320px;
+      width: min(76vw, 320px);
       height: 44px;
       border-radius: 50%;
       background: linear-gradient(#eee5d2, #c6b79d);
@@ -267,8 +281,9 @@
     .cake-body {
       position: absolute;
       bottom: 45px;
-      width: 270px;
-      height: 180px;
+      width: min(65vw, 270px);
+      height: min(43vw, 180px);
+      min-height: 145px;
 
       background:
         radial-gradient(circle, #d8675b 0 4px, transparent 5px) 20px 25px / 48px 45px,
@@ -287,7 +302,7 @@
       position: absolute;
       top: -27px;
       left: 0;
-      width: 270px;
+      width: 100%;
       height: 64px;
       border-radius: 50%;
 
@@ -373,14 +388,10 @@
       height: 32px;
       top: -40px;
       left: 1px;
-
       background: linear-gradient(#ffd451, #f18c27);
-
       border-radius: 55% 45% 60% 40%;
       transform: rotate(45deg);
-
       box-shadow: 0 0 20px rgba(255,168,35,.6);
-
       animation: flicker 1.4s infinite alternate ease-in-out;
     }
 
@@ -394,82 +405,62 @@
       }
     }
 
-    /* MAIN MESSAGE */
-
     .message {
       position: relative;
       text-align: center;
-      max-width: 420px;
-      margin: 24px auto 0;
-
+      max-width: 440px;
+      margin: clamp(18px, 5vw, 30px) auto 0;
       font-family: "Playfair Display", serif;
-      font-size: clamp(17px, 4.5vw, 20px);
-      line-height: 1.6;
-
+      font-size: clamp(16px, 4.4vw, 20px);
+      line-height: 1.62;
       color: #3c2a22;
+      padding: 0 4px;
     }
 
     .message strong {
       font-weight: 600;
     }
 
-    /* SPECIAL DAY */
-
     .special {
       font-family: "Dancing Script", cursive;
       color: #8f2f26;
       text-align: center;
       font-weight: 600;
-      font-size: clamp(36px, 10vw, 50px);
-      margin-top: 34px;
+      font-size: clamp(34px, 10vw, 50px);
+      margin-top: clamp(28px, 6vw, 38px);
       transform: rotate(-2deg);
     }
 
     .little-heart {
       color: #da655c;
-      font-size: 38px;
+      font-size: clamp(30px, 8vw, 38px);
       margin-right: 8px;
     }
 
-    /* PERSONAL MESSAGE */
-
     .personal-message {
       max-width: 430px;
-      margin: 30px auto 0;
-
+      margin: clamp(25px, 6vw, 35px) auto 0;
       text-align: center;
-
       font-family: "Dancing Script", cursive;
-      font-size: clamp(27px, 7vw, 34px);
-      line-height: 1.35;
-
+      font-size: clamp(25px, 7vw, 34px);
+      line-height: 1.38;
       color: #9b382f;
+      padding: 0 4px;
     }
-
-    /* SURPRISE BUTTON */
 
     .surprise-button {
       display: block;
-
       width: min(100%, 360px);
-
       border: 0;
-
-      margin: 38px auto 0;
-
+      margin: clamp(30px, 7vw, 42px) auto 0;
       padding: 15px 22px;
-
       border-radius: 999px;
-
       font-family: "Poppins", sans-serif;
-      font-size: 15px;
+      font-size: clamp(14px, 3.8vw, 16px);
       font-weight: 600;
-
       color: #fff8e8;
       background: #74381e;
-
       cursor: pointer;
-
       box-shadow: 0 8px 20px rgba(76, 36, 17, .22);
 
       transition:
@@ -486,20 +477,14 @@
       transform: scale(.97);
     }
 
-    /* SURPRISE MESSAGE */
-
     .surprise-message {
       overflow: hidden;
       max-height: 0;
-
       opacity: 0;
-
       text-align: center;
-
       font-family: "Dancing Script", cursive;
-      font-size: clamp(30px, 8vw, 42px);
+      font-size: clamp(29px, 8vw, 42px);
       font-weight: 600;
-
       color: #8e322a;
 
       transition:
@@ -509,12 +494,10 @@
     }
 
     .surprise-message.show {
-      max-height: 140px;
+      max-height: 150px;
       opacity: 1;
       margin-top: 26px;
     }
-
-    /* FOOTER */
 
     .footer {
       text-align: center;
@@ -524,14 +507,43 @@
       letter-spacing: .5px;
     }
 
-    @media (min-width: 600px) {
+    @media (max-width: 390px) {
       body {
-        padding: 30px 0;
+        padding: 8px;
       }
 
       .card {
-        min-height: 900px;
-        border-radius: 28px;
+        border-radius: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .cake-area {
+        height: 280px;
+      }
+
+      .heart.left {
+        left: 3%;
+      }
+
+      .heart.right {
+        right: 3%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      body {
+        background-position: center center;
+      }
+
+      .card {
+        width: 560px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      body {
+        background-attachment: scroll;
       }
     }
 
@@ -554,7 +566,6 @@
     </div>
 
     <section class="bunting">
-
       <div class="string"></div>
 
       <div class="flags">
@@ -566,11 +577,9 @@
         <span class="flag"></span>
         <span class="flag"></span>
       </div>
-
     </section>
 
     <section class="headline">
-
       <div class="happy">
         Happy
       </div>
@@ -578,7 +587,6 @@
       <div class="birthday">
         Birthday!
       </div>
-
     </section>
 
     <div class="heart left">♥</div>
@@ -587,28 +595,21 @@
     <section class="cake-area">
 
       <div class="cake-shadow"></div>
-
       <div class="plate"></div>
 
       <div class="cake-body">
 
         <div class="cake-top"></div>
-
         <div class="icing"></div>
 
         <div class="candle">
-
           <div class="wick"></div>
-
           <div class="flame"></div>
-
         </div>
 
       </div>
 
     </section>
-
-    <!-- YOUR MAIN BIRTHDAY MESSAGE -->
 
     <section class="message">
 
@@ -638,16 +639,12 @@
 
     </div>
 
-    <!-- REPLACES "YOU DESERVE THE HAPPIEST BIRTHDAY EVER" -->
-
     <section class="personal-message">
 
       I know you don’t celebrate, but I just wanted to wish you anyway
       and hope it makes your day a little more enjoyable.
 
     </section>
-
-    <!-- SURPRISE BUTTON NOW AT THE BOTTOM -->
 
     <button
       class="surprise-button"
@@ -665,13 +662,12 @@
     </div>
 
     <div class="footer">
-      Made especially for you
+      btw i tried ordering one day, but the there was no stock.
     </div>
 
   </main>
 
   <script>
-
     function showSurprise() {
 
       const message =
@@ -683,17 +679,13 @@
       message.classList.toggle("show");
 
       if (message.classList.contains("show")) {
-
-        button.textContent = "You really thought there was a surprise?";
-
+        button.textContent =
+          "You really thought there was a surprise?";
       } else {
-
-        button.textContent = "Tap for your birthday surprise";
-
+        button.textContent =
+          "Tap for your birthday surprise";
       }
-
     }
-
   </script>
 
 </body>
